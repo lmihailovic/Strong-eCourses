@@ -261,6 +261,7 @@ __pycache__/
 *.pyc
 
 # VSCode
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
