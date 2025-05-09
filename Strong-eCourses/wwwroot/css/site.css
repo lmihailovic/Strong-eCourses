@@ -63,8 +63,17 @@ img{
   font-size:1.5em;
 }
 
-.navigation li:hover, .navigation li a:hover
+.navigation li:hover a, .navigation li:hover
 {
   color:#fff;
+  font-size:1.4em;
   background-color: #1c1c1c;
+
+  transition: all 0.3s ease;
+}
+.liLogo img:hover
+{
+  height:90px;
+
+  transition: all 0.3s ease;
 }
