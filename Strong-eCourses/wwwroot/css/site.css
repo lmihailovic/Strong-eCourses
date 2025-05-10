@@ -1,31 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@900&display=swap');
+
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+  font-family:'Urbanist',sans-serif;
+  font-size: 14px; 
+}
+
+a
+{
+  text-decoration: none;
+  color:#1c1c1c;
+}
 html {
+  display:block;
+  font-family:'Urbanist',sans-serif;
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+header
+{
+  height:5em;
+  font-size:16px;
+  font-weight:500;
+  margin:2em 4em 0 4em;
+  border-bottom:1px solid #1c1c1c
+}
+header ul
+{
+  display:flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+header li
+{
+  display:flex;
+  align-items: center;
+}
+.liLogo
+{
+  width:20%;
+}
+.liLogo img
+{
+  height:80px;
+}
+img{
+  max-width:100%;
+  max-height:100%;
+}
+.navigation 
+{
+  gap:3em;
+}
+.navigation li a
+{
+  width:100px;
+  text-align: center;
+  font-size:1.5em;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.navigation li:hover a, .navigation li:hover
+{
+  color:#fff;
+  font-size:1.4em;
+  background-color: #1c1c1c;
+
+  transition: all 0.3s ease;
+}
+.liLogo img:hover
+{
+  height:90px;
+
+  transition: all 0.3s ease;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.foot
+{
+  display:flex;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  color:#f5f5f5;
+  font-weight:300
 }
-
-body {
-  margin-bottom: 60px;
+.footCol a,.footCol p
+{
+  font-weight:300;
 }
-
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.footCol
+{
+  width:33%;
+  padding:2em;
+  display:flex;
+  flex-direction:column
 }
-
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.footCol a
+{
+  color:#f5f5f5;
+}
+.footCol img
+{
+  height:200px;
 }
