@@ -20,7 +20,12 @@ html {
   font-family:'Urbanist',sans-serif;
   font-size: 14px;
 }
+body
+{
+  margin: 0 auto;
 
+  max-width: 85%;
+}
 header
 {
   height:5em;
