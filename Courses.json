@@ -1,0 +1,212 @@
+[
+    {
+        "name": "Introduction to Algorithms",
+        "link": "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/",
+        "category": "Programming",
+        "difficulty": "Intermediate",
+        "school": "MIT"
+    },
+    {
+        "name": "CS50's Introduction to Computer Science",
+        "link": "https://cs50.harvard.edu/x/",
+        "category": "Computer Science",
+        "difficulty": "Beginner",
+        "school": "Harvard"
+    },
+    {
+        "name": "Computer Science: Programming with a Purpose",
+        "link": "https://www.coursera.org/learn/cs-programming-java?source=deprecated_spark_cdp&irclickid=Xz5VDJ2ahxycWLSTflW2MTmUUksWGoy1HTa-z80&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=259799&utm_content=b2c&utm_campaignid=Class%20Central&utm_term=14726_SC_1242836_",
+        "category": "Networking",
+        "difficulty": "Beginner",
+        "school": "Princeton"
+    },
+    {
+        "name": "Operating Systems",
+        "link": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+        "category": "Computer Science",
+        "difficulty": "Intermediate",
+        "school": "University of Wisconsin-Madison"
+    },
+    {
+        "name": "The Missing Semester of Your CS Education",
+        "link": "https://missing.csail.mit.edu/",
+        "category": "Computer Science",
+        "difficulty": "Beginner",
+        "school": "MIT"
+    },
+    {
+        "name": "Introduction to Linux",
+        "link": "https://www.edx.org/course/introduction-to-linux",
+        "category": "Operating Systems",
+        "difficulty": "Beginner",
+        "school": "Linux Foundation"
+    },
+    {
+        "name": "Introduction to Cloud Computing",
+        "link": "https://www.edx.org/learn/cloud-computing/ibm-introduction-to-cloud-computing",
+        "category": "Cloud Computing",
+        "difficulty": "Beginner",
+        "school": "IBM"
+    },
+    {
+        "name": "Introduction to DevOps and Site Reliability Engineering",
+        "link": "https://www.edx.org/learn/devops/the-linux-foundation-introduction-to-devops-and-site-reliability-engineering?index=product&queryID=2065b537164c70f048bd64fb6b62b760&position=3&linked_from=autocomplete&c=autocomplete",
+        "category": "DevOps",
+        "difficulty": "Beginner",
+        "school": "Linux Foundation"
+    },
+    {
+        "name": "Blockchain: Understanding Its Uses and Implications",
+        "link": "https://www.edx.org/learn/blockchain/the-linux-foundation-blockchain-understanding-its-uses-and-implications?index=product&queryID=a86ee8888928eafe126bcd28484b903a&position=4&linked_from=autocomplete&c=autocomplete",
+        "category": "Blockchain",
+        "difficulty": "Beginner",
+        "school": "Linux Foundation"
+    },
+    {
+        "name": "Introduction to Game Development",
+        "link": "https://cs50.harvard.edu/games/",
+        "category": "Game Development",
+        "difficulty": "Intermediate",
+        "school": "Harvard"
+    },
+    {
+        "name": "Introduction to Quantum Computing",
+        "link": "https://qiskit.org/learn/intro-qc/",
+        "category": "Quantum Computing",
+        "difficulty": "Beginner",
+        "school": "IBM"
+    },
+    {
+        "name": "Introduction to Kubernetes",
+        "link": "https://www.edx.org/course/introduction-to-kubernetes",
+        "category": "Cloud Computing",
+        "difficulty": "Intermediate",
+        "school": "Linux Foundation"
+    },
+    {
+        "name": "Natural Language Processing",
+        "link": "https://archive.org/details/academictorrents_f99e7184fca947ee8f77901679e171fcadbf82e7/lectures/week1-01/Natural+Language+Processing+0.0+Introduction+(Part+1)+(1117).mp4",
+        "category": "Artificial Intelligence",
+        "difficulty": "Intermediate",
+        "school": "Columbia University"
+    },
+    {
+        "name": "Functional Programming in Scala Specialization",
+        "link": "https://www.coursera.org/specializations/scala",
+        "category": "Programming",
+        "difficulty": "Intermediate",
+        "school": "EPFL"
+    },
+    {
+        "name": "Artificial Intelligence Engineer",
+        "link": "https://www.simplilearn.com/masters-in-artificial-intelligence?utm_campaign=KiW-W4v0nBo&utm_medium=DescriptionFirstFold&utm_source=Youtube",
+        "category": "Artificial Intelligence",
+        "difficulty": "Intermediate",
+        "school": "IBM"
+    },
+    {
+        "name": "Cybersecurity",
+        "link": "https://skillsbuild.org/students/course-catalog/cybersecurity",
+        "category": "Cybersecurity",
+        "difficulty": "Beginner",
+        "school": "IBM"
+    },
+    {
+        "name": "Introduction to Data Science with Python",
+        "link": "https://www.edx.org/learn/data-science/harvard-university-introduction-to-data-science-with-python?index=product&queryID=ad8dc6e117393abcffeb5495c6411da2&position=3&linked_from=autocomplete&c=autocomplete",
+        "category": "Data Science",
+        "difficulty": "Beginner",
+        "school": "Harvard University" 
+    },
+    {
+        "name": "Supervised Machine Learning: Regression and Classification",
+        "link": "https://www.coursera.org/learn/machine-learning",
+        "category": "Machine Learning",
+        "difficulty": "Intermediate",
+        "school": "Stanford"
+    },
+    {
+        "name": "Introduction to Python Programming",
+        "link": "https://www.udacity.com/course/introduction-to-python--ud1110",
+        "category": "Programming",
+        "difficulty": "Beginner",
+        "school": "Udacity"
+    },
+    {
+        "name": "Advanced Backend Web Development",
+        "link": "https://www.udemy.com/course/refactoru-adv-backend-dev/",
+        "category": "Web Development",
+        "difficulty": "Expert",
+        "school": "RefactorU LLC"
+    },
+    {
+        "name": "Introduction to SQL",
+        "link": "https://www.datacamp.com/courses/intro-to-sql-for-data-science",
+        "category": "Databases",
+        "difficulty": "Beginner",
+        "school": "DataCamp"
+    },
+    {
+        "name": "Introduction to JavaScript",
+        "link": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+        "category": "Programming",
+        "difficulty": "Beginner",
+        "school": "freeCodeCamp"
+    },
+    {
+        "name": "Introduction to React",
+        "link": "https://reactjs.org/tutorial/tutorial.html",
+        "category": "Web Development",
+        "difficulty": "Intermediate",
+        "school": "React"
+    },
+    {
+        "name": "Introduction to Docker",
+        "link": "https://docs.docker.com/get-started/introduction/",
+        "category": "DevOps",
+        "difficulty": "Intermediate",
+        "school": "dockerdocs"
+    },
+    {
+        "name": "Introduction to Git and GitHub",
+        "link": "https://www.udacity.com/course/version-control-with-git--ud123",
+        "category": "Version Control",
+        "difficulty": "Beginner",
+        "school": "Udacity"
+    },
+    {
+        "name": "C introduction",
+        "link": "https://www.w3schools.com/c/c_intro.php",
+        "category": "Programming",
+        "difficulty": "Beginner",
+        "school": "w3schools"
+    },
+    {
+        "name": "Introduction to Java Programming",
+        "link": "https://www.coursera.org/learn/java-programming",
+        "category": "Programming",
+        "difficulty": "Beginner",
+        "school": "Duke University"
+    },
+    {
+        "name": "IoT (Internet of Things) Wireless & Cloud Computing Emerging Technologies",
+        "link": "https://www.classcentral.com/course/iot-wireless-cloud-computing-11982",
+        "category": "Networking",
+        "difficulty": "Intermediate",
+        "school": "Yonsei University"
+    },
+    {
+        "name": "Introduction to Robotics",
+        "link": "https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/",
+        "category": "Robotics",
+        "difficulty": "Intermediate",
+        "school": "MIT"
+    },
+    {
+        "name": "Introduction to Big Data",
+        "link": "https://www.coursera.org/learn/big-data-introduction",
+        "category": "Data Science",
+        "difficulty": "Beginner",
+        "school": "University of California, San Diego"
+    }
+]
