@@ -46,4 +46,11 @@ public class AccountController : Controller
 
         return View();
     }
+
+    [Authorize]
+    public async Task<ActionResult> Logout()
+    {
+        await signInManager.SignOutAsync();
+        return RedirectToAction("Login", "Account");
+    }
 }
