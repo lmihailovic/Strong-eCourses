@@ -1,20 +1,26 @@
 using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 namespace Strong_eCourses.Models;
 
 public class Course
 {
-    [Required]
-    public long Id { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
 
-    [Required]
+    [BsonElement("name")]
     public string Name { get; set; }
 
-    [Required]
+    [BsonElement("link")]
     public string Link { get; set; }
-    
-    [Required]
+
+    [BsonElement("category")]
+    public string Category { get; set; }
+
+    [BsonElement("difficulty")]
     public string Difficulty { get; set; }
 
-    [Required]
-    public List<string> Categories { get; set; }
+    [BsonElement("school")]
+    public string School { get; set; }
 }
