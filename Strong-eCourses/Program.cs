@@ -1,4 +1,8 @@
+using Strong_eCourses;
+
 var builder = WebApplication.CreateBuilder(args);
+var mongoDbSettings=builder.Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
+builder.Services.AddControllersWithViews();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
