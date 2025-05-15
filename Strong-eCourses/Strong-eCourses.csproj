@@ -7,4 +7,8 @@
     <RootNamespace>Strong_eCourses</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="3.4.0" />
+  </ItemGroup>
+
 </Project>
