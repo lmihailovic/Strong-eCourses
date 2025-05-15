@@ -1,3 +1,7 @@
+using MongoDB.Driver;
+using Strong_eCourses.Services;
+using Strong_eCourses.Settings;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,5 +29,16 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+builder.Services.Configure<MongoDBSettings>(
+    builder.Configuration.GetSection("MongoDBSettings")
+);
+
+builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
+{
+    var settings = builder.Configuration.GetSection("MongoDBSettings").Get<MongoDBSettings>();
+    return new MongoClient(settings.ConnectionString);
+});
+
+builder.Services.AddScoped<MongoDBService>();
 
 app.Run();
