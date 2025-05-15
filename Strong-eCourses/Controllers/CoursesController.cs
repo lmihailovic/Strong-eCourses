@@ -6,13 +6,13 @@ using Strong_eCourses.Services;
 
 namespace Strong_eCourses.Controllers;
 
-public class HomeController : Controller
+public class CoursesController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<CoursesController> _logger;
 
     private readonly MongoDBService _mongoService;
 
-    public HomeController(ILogger<HomeController> logger, MongoDBService mongoService)
+    public CoursesController(ILogger<CoursesController> logger, MongoDBService mongoService)
     {
         _logger = logger;
         _mongoService = mongoService;
