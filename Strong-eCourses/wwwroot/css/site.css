@@ -220,3 +220,46 @@ input
     width:50%;
     margin:0 auto
 }
+.reg
+{
+    max-width:85%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hero-content
+{
+  display:flex;
+  flex-direction: column;
+
+}
+.hero-content ul li
+{
+  list-style-type: none;
+}
+.hero-content h1
+{
+  font-weight:500;
+  font-size:4em;
+}
+
+.hero-content p, .hero-content ul li
+{
+  font-size:1.25em;
+}
+.reg .loginDiv
+{
+  margin-right:5em;
+}
+
+.logos
+{
+  display:flex;
+  height:30%;
+  width:100%;
+}
+.logos img
+{
+  width:20em
+}
