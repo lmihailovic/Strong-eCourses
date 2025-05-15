@@ -38,8 +38,9 @@ namespace Strong_eCourses.Controllers
                         ModelState.AddModelError("",error.Description);
                     }
                 }
-                return View(user);
+
             }
+                return View(user);
         }
     }
 }
