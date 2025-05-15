@@ -1,6 +1,9 @@
-﻿namespace Strong_eCourses;
+﻿using AspNetCore.Identity.MongoDbCore.Models;
+using MongoDbGenericRepository.Attributes;
+namespace Strong_eCourses;
 
-public class ApplicationRole
+[CollectionName("Roles")]
+public class ApplicationRole:MongoIdentityRole<Guid>
 {
 
 }
