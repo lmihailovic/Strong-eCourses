@@ -1,4 +1,5 @@
-
+@model User
+<div asp-asp-validation-summary="All"></div>
     <div class="loginDiv">
         <div class="logo">
             <img src="~/images/strongWhite.png" alt="Logo">
@@ -8,20 +9,20 @@
             <h2>Dobro došli!</h2>
             <p>Molimo potvrdite identitet</p>
         </div>
-        <form action="" method="post">
-        <div class="form">
-            <div class="formField inp">
-                <label for="">E-mail</label>
-                <input type="text">
+        <form method="POST">
+            <div class="form">
+                <div class="formField inp">
+                    <label for="">E-mail</label>
+                    <input asp-for="Email" type="text">
+                </div>
+                <div class="formField inp">
+                    <label for="">Lozinka</label>
+                    <input asp-for="Password" type="text">
+                </div>
+                <div class="formField submitBtn">
+                    <button type="submit">Login</button>
+                </div>          
             </div>
-            <div class="formField inp">
-                <label for="">Lozinka</label>
-                <input type="text">
-            </div>
-            <div class="formField submitBtn">
-                <button type="submit">Login</button>
-            </div>          
-        </div>
         </form>
         <div class="formField formNote">
             <p>Nemate nalog? <a href="register.html">Registrujte se</a></p>
