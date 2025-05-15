@@ -1,0 +1,24 @@
+@model User
+
+<h1>Kreiranje korisnika</h1>
+
+@if(ViewBag.Message !=null)
+{
+    <div>@ViewBag.Message</div>
+}
+
+<form action="">
+    <div class="formGroup">
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+    </div>
+        <div class="formGroup"></div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+    </div>
+        <div class="formGroup"></div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password">
+    </div>
+    <button type="submit">Create</button>
+</form>
