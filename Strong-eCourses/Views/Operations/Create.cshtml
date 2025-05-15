@@ -7,18 +7,41 @@
     <div>@ViewBag.Message</div>
 }
 
-<form action="" method="POST">
-    <div class="formGroup">
-        <label asp-for="Name"></label>
-        <input asp-for="Name">
+  <div class="cont">
+        <div class="loginDiv">
+            <div class="regLogo">
+                <img src="~/images/strongWhite.png" alt="Logo">
+    
+            </div>
+            <div class="welcomeDiv">
+                <h2>Dobro došli!</h2>
+                <p>Molimo kreirajte korisnički nalog</p>
+            </div>
+            <form action="" method="POST">
+            <div class="form">
+                <div class="formField inp">
+                    <label asp-for="Name">Korisničko ime:</label>
+                    <input asp-for="Name" type="text">
+                </div>
+                <div class="formField inp">
+                    <label asp-for="Email">E-mail</label>
+                    <input asp-for="Email" type="text">
+                </div>
+                <div class="formField inp">
+                    <label asp-for="Password">Lozinka</label>
+                    <input asp-for="Password" type="password">
+                </div>
+                @* <div class="formField inp">
+                    <label for="">Potvrdite lozinku</label>
+                    <input type="password">
+                </div> *@
+                <div class="formField submitBtn">
+                    <button type="submit">Potvrdi</button>
+                </div>
+                <div class="formField formNote">
+                    <p>Imate nalog? <a href="login.html">Ulogujte se</a></p>
+                </div>     
+            </div>
+            </form>
+        </div>
     </div>
-        <div class="formGroup"></div>
-        <label asp-for="Email"></label>
-        <input asp-for="Email">
-    </div>
-        <div class="formGroup"></div>
-        <label asp-for="Password"></label>
-        <input asp-for="Password">
-    </div>
-    <button type="submit">Create</button>
-</form>
