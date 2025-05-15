@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration.UserSecrets;
+using Strong_eCourses.Models;
 
 namespace Strong_eCourses.Controllers
 {
@@ -40,7 +40,7 @@ namespace Strong_eCourses.Controllers
                 }
 
             }
-                return View(user);
+            return View(user);
         }
     }
 }

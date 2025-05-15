@@ -1,13 +1,13 @@
 @model User
 
 <h1>Kreiranje korisnika</h1>
-
+<div asp-validation-summary="All"></div>
 @if(ViewBag.Message !=null)
 {
     <div>@ViewBag.Message</div>
 }
 
-<form action="">
+<form action="" method="POST">
     <div class="formGroup">
         <label asp-for="Name"></label>
         <input asp-for="Name">
