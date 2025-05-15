@@ -1,19 +1,20 @@
 using System.ComponentModel.DataAnnotations;
+namespace Strong_eCourses.Models;
 
 public class Course
 {
     [Required]
-    public long Id { get; private set; }
+    public long Id { get; set; }
 
     [Required]
-    public string Name { get; private set; }
+    public string Name { get; set; }
 
     [Required]
-    public string Link { get; private set; }
+    public string Link { get; set; }
     
     [Required]
-    public string Difficulty { get; private set; }
+    public string Difficulty { get; set; }
 
     [Required]
-    public List<string> Categories { get; private set; }
+    public List<string> Categories { get; set; }
 }
