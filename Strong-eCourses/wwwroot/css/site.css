@@ -48,6 +48,7 @@ header li
 }
 .liLogo img
 {
+
   height:80px;
 }
 img{
@@ -65,7 +66,7 @@ img{
   font-size:1.5em;
 }
 
-.navigation li:hover a, .navigation li:hover
+.navigation li:hover a
 {
   color:#fff;
   font-size:1.4em;
@@ -75,8 +76,7 @@ img{
 }
 .liLogo img:hover
 {
-  height:90px;
-
+  background-color: #1c1c1c1c;
   transition: all 0.3s ease;
 }
 
@@ -107,7 +107,11 @@ img{
 {
   height:200px;
 }
-
+.footCol p:hover, .footCol a:hover
+{
+  padding-left:.2em;
+  color:#fff
+}
 .loginDiv
 {
     width:40%;
