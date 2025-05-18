@@ -1,0 +1,77 @@
+@model User
+@{Layout=null;}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Strong_eCourses</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Strong_eCourses.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<div asp-validation-summary="All"></div>
+@if(ViewBag.Message !=null)
+{
+    <div>@ViewBag.Message</div>
+}
+
+  <div class="reg">
+        <div class="loginDiv">
+            <div class="regLogo">
+                <img src="~/images/strongWhite.png" alt="Logo">
+    
+            </div>
+            <div class="welcomeDiv">
+                <h2>Dobro došli!</h2>
+                <p>Molimo kreirajte korisnički nalog</p>
+            </div>
+            <form action="" method="POST">
+            <div class="form">
+                <div class="formField inp">
+                    <label asp-for="Name">Korisničko ime:</label>
+                    <input asp-for="Name" type="text">
+                </div>
+                <div class="formField inp">
+                    <label asp-for="Email">E-mail</label>
+                    <input asp-for="Email" type="text">
+                </div>
+                <div class="formField inp">
+                    <label asp-for="Password">Lozinka</label>
+                    <input asp-for="Password" type="password">
+                </div>
+                @* <div class="formField inp">
+                    <label for="">Potvrdite lozinku</label>
+                    <input type="password">
+                </div> *@
+                <div class="formField submitBtn">
+                    <button type="submit">Potvrdi</button>
+                </div>
+                <div class="formField formNote">
+                    <p>Imate nalog? <a href="login.html">Ulogujte se</a></p>
+                </div>     
+            </div>
+            </form>
+        </div>
+        <div class="hero-content"> <h1>Pridruži se jakoj zajednici!</h1>
+        <p>Naša platforma za besplatne eKurseve ti omogućava da savladaš nove veštine iz IT-a, dizajna, biznisa i još mnogo toga.</p>
+        <ul>
+            <li>Potpuno besplatno</li>
+            <li>Kursevi kreirani od strane stručnjaka</li>
+            <li>Uči kad hoćeš, gde hoćeš</li>
+            <li> Dobij sertifikat po završetku</li>
+        </ul>
+        <p>Ne gubi vreme – napravi nalog i počni da učiš danas!</p>
+        <div class="logos">
+            <img src="~/images/espressoBlack.png" alt="3spresso Logo">
+            <img src="~/images/raf.png" alt="RAF logo">
+        </div>
+        </div>
+       
+    </div>
+    </div>
+</body>
+</html>

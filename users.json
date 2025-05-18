@@ -1,0 +1,37 @@
+[
+    {
+        "firstName": "Luka",
+        "lastName": "Obradovic",
+        "email": "lobradovic@raf.rs",
+        "password": "password1",
+        "admin":1
+    },
+    {
+        "firstName": "Luka",
+        "lastName": "Mihailovic",
+        "email": "lmihailovic@raf.rs",
+        "password": "password2",
+        "admin":1
+    },
+    {
+        "firstName": "Hristina",
+        "lastName": "Boharev",
+        "email": "hboharev@raf.rs",
+        "password": "password3",
+        "admin":1
+    },
+    {
+        "firstName": "Marko",
+        "lastName": "Teofanovic",
+        "email": "mteofanovic@raf.rs",
+        "password": "password4",
+        "admin":1
+    },
+    {
+        "firstName": "Petar",
+        "lastName": "Petrovic",
+        "email": "ppetrovic@raf.rs",
+        "password": "password5",
+        "admin":0
+    }
+]
