@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using Strong_eCourses.Services;
 using Strong_eCourses.Settings;
