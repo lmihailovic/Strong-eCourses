@@ -18,14 +18,14 @@ public class CoursesController : Controller
         _mongoService = mongoService;
     }
 
-    public IActionResult Index()
-    {
-        var collection = _mongoService.GetCollection<Course>("courses");
-        var courses = collection.Find(_ => true).ToList();
+    // public IActionResult Index()
+    // {
+    //     var collection = _mongoService.GetCollection<Course>("courses");
+    //     var courses = collection.Find(_ => true).ToList();
 
-        
-        return View(courses);
-    }
+
+    //     return View(courses);
+    // }
 
     public IActionResult Privacy()
     {
@@ -37,4 +37,28 @@ public class CoursesController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    
+    public IActionResult Index(int page = 1, int pageSize = 6)
+    {
+        var collection = _mongoService.GetCollection<Course>("courses");
+
+        var totalCourses = collection.CountDocuments(_ => true);
+        var totalPages = (int)Math.Ceiling((double)totalCourses / pageSize);
+
+        var courses = collection
+            .Find(_ => true)
+            .Skip((page - 1) * pageSize)
+            .Limit(pageSize)
+            .ToList();
+
+        var viewModel = new CourseViewModel
+        {
+            Courses = courses,
+            CurrentPage = page,
+            TotalPages = totalPages
+        };
+
+        return View(viewModel);
+    }
+
 }

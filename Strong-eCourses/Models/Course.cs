@@ -23,4 +23,6 @@ public class Course
 
     [BsonElement("school")]
     public string School { get; set; }
+
+    
 }

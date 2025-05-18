@@ -1,19 +1,35 @@
-@model List<Strong_eCourses.Models.Course>
+@model Strong_eCourses.Models.CourseViewModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Courses Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    
-    <ul>
-    @foreach (var c in Model)
-    {
-        <li>
-            @c.Name
-        </li>
-    }
-    </ul>
+<div class="container">
+    <h1 class="display-4 text-left mb-4">Kursevi</h1>
 
+    <div class="course-grid">
+        @foreach (var course in Model.Courses)
+        {
+            <a href="@course.Link" target="_blank" class="course-card-link">
+            <div class="course-card">
+                <h5>@course.Name</h5>
+                <p>@course.School</p>
+                <p>@course.Difficulty</p>
+                <p><strong>Category:</strong> @course.Category</p>
+                
+            </div>
+        </a>
+        }
+    </div>
+
+    <div class="pagination-controls text-center mt-4">
+        @if (Model.CurrentPage > 1)
+        {
+            <a href="?page=@(Model.CurrentPage - 1)" class="btn btn-secondary">Prethodna</a>
+        }
+        <span class="mx-2">Strana @Model.CurrentPage of @Model.TotalPages</span>
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <a href="?page=@(Model.CurrentPage + 1)" class="btn btn-secondary">Sledeca</a>
+        }
+    </div>
 </div>
