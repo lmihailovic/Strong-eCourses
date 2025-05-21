@@ -8,12 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.Configure<MongoDBSettings>(
-    builder.Configuration.GetSection("MongoDBSettings")
+    builder.Configuration.GetSection("MongoDbConfig")
 );
 
 builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
 {
-    var settings = builder.Configuration.GetSection("MongoDBSettings").Get<MongoDBSettings>();
+    var settings = builder.Configuration.GetSection("MongoDbConfig").Get<MongoDBSettings>();
     return new MongoClient(settings.ConnectionString);
 });
 
