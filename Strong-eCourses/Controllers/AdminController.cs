@@ -7,7 +7,7 @@ namespace Strong_eCourses.Controllers;
 [Authorize(Roles ="Admin")]
 public class AdminController : Controller
 {
-    public IActionResult Index()
+    public IActionResult Admin()
     {
         return View();
     }
