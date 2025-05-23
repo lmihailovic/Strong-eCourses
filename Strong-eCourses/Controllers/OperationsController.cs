@@ -40,7 +40,7 @@ namespace Strong_eCourses.Controllers
                 }
 
             }
-            return View(user);
+            return RedirectToAction("Login", "Account");
         }
     }
 }
