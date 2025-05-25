@@ -1,31 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+  font-family:'Urbanist',sans-serif;
+  font-size: 14px; 
+}
+
+a
+{
+  text-decoration: none;
+  color:#1c1c1c;
+}
 html {
+  display:block;
+  font-family:'Urbanist',sans-serif;
   font-size: 14px;
 }
+body
+{
+  margin: auto;
+}
+header
+{
+  height:5em;
+  font-size:16px;
+  font-weight:500;
+  margin:2em 4em 0 4em;
+  border-bottom:1px solid #1c1c1c
+}
+header ul
+{
+  display:flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+header li
+{
+  display:flex;
+  align-items: center;
+}
+.liLogo
+{
+  width:20%;
+}
+.liLogo img
+{
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+  height:80px;
+}
+img{
+  max-width:100%;
+  max-height:100%;
+}
+.navigation 
+{
+  gap:3em;
+}
+.navigation li a
+{
+  width:100px;
+  text-align: center;
+  font-size:1.5em;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.navigation li:hover a
+{
+  color:#fff;
+  font-size:1.4em;
+  background-color: #1c1c1c;
+
+  transition: all 0.3s ease;
+}
+.liLogo img:hover
+{
+  background-color: #1c1c1c1c;
+  transition: all 0.3s ease;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.foot
+{
+  display:flex;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  color:#f5f5f5;
+  font-weight:300
+}
+.footCol a,.footCol p
+{
+  font-weight:300;
+}
+.footCol
+{
+  width:33%;
+  padding:2em;
+  display:flex;
+  flex-direction:column
+}
+.footCol a
+{
+  color:#f5f5f5;
+}
+.footCol img
+{
+  height:200px;
+}
+.footCol p:hover, .footCol a:hover
+{
+  padding-left:.2em;
+  color:#fff
+}
+.loginDiv
+{
+    width:40%;
+    border:1px solid #1c1c1c;
+    padding:1em 3em;
+    color:#f5f5f5;
+    background-color: #1c1c1c;
+    margin: auto;
+
+    box-shadow: 0px -2px 55px 13px rgba(115,115,115,0.75);
+    -webkit-box-shadow: 0px -2px 55px 13px rgba(115,115,115,0.75);
+    -moz-box-shadow: 0px -2px 55px 13px rgba(115,115,115,0.75);
+}
+.loginDiv h2, .loginDiv label,.loginDiv p
+{
+    font-weight: 200;
+}
+ .loginDiv label,.loginDiv p
+{
+    font-size: 18px;
+}
+.formField
+{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:2em;
+}
+.formNote
+{
+    margin:0 auto;
+    text-align: center;
+}
+.formNote a, .formNote p
+{
+    color:#cfcfcf;
+    font-size:15px
+}
+.formNote a:hover
+{
+    color:#fff;
+
+    transition: all 0.3s ease
+}
+.cont
+{
+    max-width:85%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcomeDiv
+{
+    text-align: center;
+}
+.welcomeDiv h2
+{
+    font-size:24px;
+    font-weight: lighter;
+}
+input
+{
+    outline:none
+}
+.inp input
+{
+    background-color: #1c1c1c;
+    height:3em;
+    border:none;
+    border-bottom:1px solid #f5f5f5;
+    color:#f5f5f5
+
+}
+.logo{
+    width:80%;
+    margin:0 auto;
+}
+.inp input:hover
+{
+    margin-top:0.3em;
+
+    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out;
+}
+.submitBtn button
+{
+    background-color: #1c1c1c;
+    height:3em;
+    border-color:#f5f5f5;
+    border:none;
+    border:1px solid #f5f5f5;
+    color:#f5f5f5;
+    font-weight:300;
+    font-size:18px;
 }
 
-body {
-  margin-bottom: 60px;
+.submitBtn button:hover
+{
+    background-color:#f5f5f5;
+    color: #1c1c1c;
+  
+    transition: all 0.3s ease;
+}
+.loginDiv h2, .loginDiv p
+{
+    padding-bottom: 0.5em;
+}
+.regLogo
+{
+    width:50%;
+    margin:0 auto
+}
+.reg
+{
+    max-width:85%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hero-content
+{
+  display:flex;
+  flex-direction: column;
+
+}
+.hero-content ul li
+{
+  list-style-type: none;
+}
+.hero-content h1
+{
+  font-weight:500;
+  font-size:4em;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.hero-content p, .hero-content ul li
+{
+  font-size:1.25em;
+}
+.reg .loginDiv
+{
+  margin-right:5em;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.logos
+{
+  display:flex;
+  height:30%;
+  width:100%;
+}
+.logos img
+{
+  width:20em
 }
