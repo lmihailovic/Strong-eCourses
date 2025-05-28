@@ -1,0 +1,47 @@
+@model User
+@{Layout=null;}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Strong_eCourses</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Strong_eCourses.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<div asp-asp-validation-summary="All"></div>
+    <div class="loginDiv">
+        <div class="logo">
+            <img src="~/images/strongWhite.png" alt="Logo">
+
+        </div>
+        <div class="welcomeDiv">
+            <h2>Dobro došli!</h2>
+            <p>Molimo potvrdite identitet</p>
+        </div>
+        <form method="POST">
+            <div class="form">
+                <div class="formField inp">
+                    <label for="">E-mail</label>
+                    <input name="email" type="text">
+                </div>
+                <div class="formField inp">
+                    <label for="">Lozinka</label>
+                    <input name="password" type="text">
+                </div>
+                <div class="formField submitBtn">
+                    <button type="submit">Login</button>
+                </div>          
+            </div>
+        </form>
+        <div class="formField formNote">
+            <p>Nemate nalog? <a asp-controller="Operations" asp-action="Create">Registrujte se</a></p>
+        </div>
+
+    </div>
+    </body>
+    </html>

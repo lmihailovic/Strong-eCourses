@@ -11,9 +11,9 @@ builder.Services.AddControllersWithViews();
 
 var mongoDbSettings=builder.Configuration.GetSection(nameof(MongoDbConfig)).Get<MongoDbConfig>();
 
-// builder.Services.AddIdentity<ApplicationUser, ApplicationRole>()
-// .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
-// (mongoDbSettings.ConnectionString, mongoDbSettings.Name);
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>()
+.AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
+(mongoDbSettings.ConnectionString, mongoDbSettings.Name);
 
 builder.Services.Configure<MongoDBSettings>(
     builder.Configuration.GetSection("MongoDbConfig")

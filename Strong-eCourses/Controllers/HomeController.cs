@@ -3,9 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Strong_eCourses.Models;
 using Strong_eCourses.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Strong_eCourses.Controllers;
-
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
