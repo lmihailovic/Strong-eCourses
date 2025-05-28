@@ -41,9 +41,9 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-app.MapControllerRoute(
-    name: "courses",
-    pattern: "{controller=Courses}/{action=Index}/{id?}")
-    .WithStaticAssets();
+// app.MapControllerRoute(
+//     name: "courses",
+//     pattern: "{controller=Courses}/{action=Index}/{id?}")
+//     .WithStaticAssets();
 
 app.Run();

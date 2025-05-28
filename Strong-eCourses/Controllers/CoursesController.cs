@@ -38,15 +38,34 @@ public class CoursesController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
     
-    public IActionResult Index(int page = 1, int pageSize = 6)
+    public IActionResult Index(string searchQuery = "", string selectedCategory = "", int page = 1, int pageSize = 6)
     {
+        // Ucitavanje kategorija
         var collection = _mongoService.GetCollection<Course>("courses");
 
-        var totalCourses = collection.CountDocuments(_ => true);
+        var categories = collection.Distinct<string>("Category", FilterDefinition<Course>.Empty).ToList();
+
+        
+        var filterBuilder = Builders<Course>.Filter;
+        var filter = filterBuilder.Empty;
+
+        if (!string.IsNullOrWhiteSpace(searchQuery))
+        {
+            filter &= filterBuilder.Regex(c => c.Name, new MongoDB.Bson.BsonRegularExpression(searchQuery, "i"));
+        }
+
+        if (!string.IsNullOrWhiteSpace(selectedCategory))
+        {
+            filter &= filterBuilder.Eq(c => c.Category, selectedCategory);
+        }
+
+        // Paginacija
+        var totalCourses = collection.CountDocuments(filter);
         var totalPages = (int)Math.Ceiling((double)totalCourses / pageSize);
 
+        
         var courses = collection
-            .Find(_ => true)
+            .Find(filter)
             .Skip((page - 1) * pageSize)
             .Limit(pageSize)
             .ToList();
@@ -55,7 +74,10 @@ public class CoursesController : Controller
         {
             Courses = courses,
             CurrentPage = page,
-            TotalPages = totalPages
+            TotalPages = totalPages,
+            SearchQuery = searchQuery,
+            SelectedCategory = selectedCategory,
+            Categories = categories
         };
 
         return View(viewModel);
