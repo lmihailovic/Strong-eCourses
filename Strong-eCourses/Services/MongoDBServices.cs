@@ -8,7 +8,7 @@ namespace Strong_eCourses.Services
 
         public MongoDBService(IMongoClient client, IConfiguration configuration)
         {
-            var databaseName = configuration["MongoDBSettings:DatabaseName"];
+            var databaseName = configuration["MongoDbConfig:Name"];
             _database = client.GetDatabase(databaseName);
         }
 
