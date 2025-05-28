@@ -418,3 +418,21 @@ footer {
   
     transition: all 0.3s ease;
 }
+
+
+.course-card .buttons .formField a
+{
+  width:100px;
+  font-size:15px;
+  text-decoration: none;
+}
+.course-card .buttons .formField .accent:hover
+{
+  border:1px solid rgb(137, 72, 79);
+  color:rgb(137, 72, 79);
+}
+.course-card .buttons
+{
+  display:flex;
+  justify-content: flex-start;
+}

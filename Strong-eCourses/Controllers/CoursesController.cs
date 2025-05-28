@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Strong_eCourses.Models;
@@ -6,6 +7,7 @@ using Strong_eCourses.Services;
 
 namespace Strong_eCourses.Controllers;
 
+[Authorize]
 public class CoursesController : Controller
 {
     private readonly ILogger<CoursesController> _logger;
@@ -37,7 +39,7 @@ public class CoursesController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    
+
     public IActionResult Index(string searchQuery = "", string selectedCategory = "", int page = 1, int pageSize = 6)
     {
         // Ucitavanje kategorija
@@ -45,7 +47,7 @@ public class CoursesController : Controller
 
         var categories = collection.Distinct<string>("Category", FilterDefinition<Course>.Empty).ToList();
 
-        
+
         var filterBuilder = Builders<Course>.Filter;
         var filter = filterBuilder.Empty;
 
@@ -63,7 +65,7 @@ public class CoursesController : Controller
         var totalCourses = collection.CountDocuments(filter);
         var totalPages = (int)Math.Ceiling((double)totalCourses / pageSize);
 
-        
+
         var courses = collection
             .Find(filter)
             .Skip((page - 1) * pageSize)
@@ -81,6 +83,15 @@ public class CoursesController : Controller
         };
 
         return View(viewModel);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var collection = _mongoService.GetCollection<Course>("courses");
+
+        await collection.DeleteOneAsync(p => p.Id == id);
+        return RedirectToAction("Index"); 
     }
 
 }
