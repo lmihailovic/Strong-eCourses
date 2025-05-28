@@ -11,7 +11,7 @@ public class AdminController : Controller
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly RoleManager<ApplicationRole> _roleManager;
-    public AdminController(UserManager<ApplicationUser> userManager,RoleManager<ApplicationRole> roleManager)
+    public AdminController(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
     {
 
         _userManager = userManager;
@@ -24,7 +24,16 @@ public class AdminController : Controller
         var users = _userManager.Users.ToList();
         return View(users);
     }
-    
+
+    public IActionResult Users()
+    {
+        return View();
+    }
+
+    public IActionResult NewCourse()
+    {
+        return View();
+    }
 
 }
 
