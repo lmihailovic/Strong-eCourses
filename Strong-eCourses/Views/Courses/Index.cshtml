@@ -24,14 +24,33 @@
     <div class="course-grid">
         @foreach (var course in Model.Courses)
         {
-            <a href="@course.Link" target="_blank" class="course-card-link">
+            
                 <div class="course-card">
+                    <a href="@course.Link" target="_blank" class="course-card-link">
                     <h5>@course.Name</h5>
                     <p>@course.School</p>
                     <p>@course.Difficulty</p>
                     <p><strong>Category:</strong> @course.Category</p>
+                    </a>
+                    @if(User.IsInRole("Admin"))
+                    {
+                        <div class="buttons">
+                            <form asp-controller="Courses" asp-action="Delete" method="post" >
+                                <input type="hidden" name="id" value="@course.Id" />
+                                <div class="formField submitBtn"><button type="submit" class="accent">Obriši</button></div>
+                            </form>
+                            <form asp-controller="Courses" asp-action="Delete" method="post">
+                                <input type="hidden" name="id" value="@course.Id" />
+                            <div class="formField submitBtn">
+                                <button type="submit" asp-controller="Course" asp-action="Edit" asp-route-id="@course.Id">Izmeni</button>
+                            </div>
+                            </form>
+
+
+                        </div>
+                    }
                 </div>
-            </a>
+
         }
     </div>
 
@@ -40,7 +59,7 @@
         {
             <a href="?searchQuery=@Model.SearchQuery&selectedCategory=@Model.SelectedCategory&page=@(Model.CurrentPage - 1)" class="btn btn-secondary">Prethodna</a>
         }
-        <span class="mx-2">Strana @Model.CurrentPage of @Model.TotalPages</span>
+        <span class="mx-2">Strana @Model.CurrentPage od @Model.TotalPages</span>
         @if (Model.CurrentPage < Model.TotalPages)
         {
             <a href="?searchQuery=@Model.SearchQuery&selectedCategory=@Model.SelectedCategory&page=@(Model.CurrentPage + 1)" class="btn btn-secondary">Sledeća</a>
