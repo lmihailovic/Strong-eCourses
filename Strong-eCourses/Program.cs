@@ -21,7 +21,7 @@ builder.Services.Configure<MongoDBSettings>(
 
 builder.Services.AddSingleton<IMongoClient>(serviceProvider =>
 {
-    var settings = builder.Configuration.GetSection("MongoDbConfig").Get<MongoDBSettings>();
+    var settings = builder.Configuration.GetSection("MongoDbConfig").Get<MongoDbConfig>();
     return new MongoClient(settings.ConnectionString);
 });
 
