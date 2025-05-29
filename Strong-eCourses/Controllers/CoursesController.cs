@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using DnsClient.Protocol;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
@@ -91,7 +92,66 @@ public class CoursesController : Controller
         var collection = _mongoService.GetCollection<Course>("courses");
 
         await collection.DeleteOneAsync(p => p.Id == id);
-        return RedirectToAction("Index"); 
+        return RedirectToAction("Index");
     }
 
+    [Authorize(Roles = "Admin")]
+    public IActionResult Course()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Course(Course course)
+    {
+        var collection = _mongoService.GetCollection<Course>("courses");
+
+        if (!ModelState.IsValid)
+        {
+            return View(course);
+        }
+        await collection.InsertOneAsync(course);
+
+        return RedirectToAction("Index");
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet]
+    public async Task<IActionResult> Edit(string id)
+    {
+        var collection = _mongoService.GetCollection<Course>("courses");
+        var course = await collection.Find(c => c.Id == id).FirstOrDefaultAsync();
+
+        if (course == null)
+        {
+            return NotFound();
+        }
+
+        return View(course);
+    }
+
+[HttpPost]
+[Authorize(Roles = "Admin")]
+public async Task<IActionResult> Edit(Course course)
+{
+    if (!ModelState.IsValid)
+    {
+        return View(course);
+    }
+
+    var collection = _mongoService.GetCollection<Course>("courses");
+
+    var filter = Builders<Course>.Filter.Eq(c => c.Id, course.Id);
+
+    // Zameni postojeći dokument novim izmenjenim podacima
+    var result = await collection.ReplaceOneAsync(filter, course);
+
+    if (result.MatchedCount == 0)
+    {
+        return NotFound();
+    }
+
+    return RedirectToAction("Index");
+}
 }
