@@ -35,16 +35,14 @@
                     @if(User.IsInRole("Admin"))
                     {
                         <div class="buttons">
-                            <form asp-controller="Courses" asp-action="Delete" method="post" >
-                                <input type="hidden" name="id" value="@course.Id" />
-                                <div class="formField submitBtn"><button type="submit" class="accent">Obriši</button></div>
-                            </form>
+
                             <div class="formField submitBtn">
                                 <a asp-controller="Courses" asp-action="Edit" asp-route-id="@course.Id">Izmeni</a>
                             </div>
-
-
-
+                            <form asp-controller="Courses" asp-action="Delete" method="post" >
+                                <input type="hidden" name="id" value="@course.Id" />
+                                <div class="formField submitBtn"><input type="submit" class="accent" value="Obriši"></div>
+                            </form>
                         </div>
                     }
                 </div>

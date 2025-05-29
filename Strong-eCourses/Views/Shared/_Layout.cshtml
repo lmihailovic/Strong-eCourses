@@ -16,6 +16,8 @@
             <li class="liLogo"><a href="/"><img src="~/images/strongBlack.png" alt="Logo" /></a></li>
             <div class="navigation d-flex">
                 <li><a href="/">Početna</a></li>
+                <li><a asp-controller="Courses" asp-action="Index">Kursevi</a></li>
+                <li><a asp-controller="Schools" asp-action="Index">Škole</a></li>
                      @{
                         if (User.IsInRole("Admin"))
                         {
@@ -43,10 +45,10 @@
     </div>
     <div class="footCol">
         <h3>Autori</h3>
-        <p>Hristina Boharev</p>
-        <p>Marko Teofanović</p>
-        <p>Luka Mihailović</p>
-        <p>Luka Obradović</p>
+        <a href="https://github.com/hristinaboharev">Hristina Boharev</a>
+        <a href="https://github.com/TheTheophan">Marko Teofanović</a>
+        <a href="https://github.com/lmihailovic">Luka Mihailović</a>
+        <a href="https://github.com/lobradovic">Luka Obradović</a>
     </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -7,28 +7,42 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
-    <div class="container d-flex flex-column align-items-center center-box">
+    <div class="mainMain">
+        <div class="mainLeft">
+                @* Linkovi za kurseve i škole *@
+                <a href="/courses" class="text-decoration-none text-dark">
+                    <div class="link-box">
+                        <h3>Kursevi</h3>
+                    </div>
+                </a>
+                <a href="/schools" class="text-decoration-none text-dark">
+                    <div class="link-box">
+                        <h3>Škole</h3>
+                    </div>
+                </a>
+            @* bonus link ka strong kursu *@
+            <div class="strongCourse">
+                <a href="/strongCourse">
+                    <h3>The STRONG Course</h3>
+                </a>
+            </div>  
 
-        <div class="d-flex flex-row justify-content-center">
-            @* Linkovi za kurseve i škole *@
-            <a href="/courses" class="text-decoration-none text-dark me-4">
-                <div class="link-box">
-                    <h3>Kursevi</h3>
-                </div>
-            </a>
-            <a href="/schools" class="text-decoration-none text-dark">
-                <div class="link-box">
-                    <h3>Škole</h3>
-                </div>
-            </a>
         </div>
-        @* bonus link ka strong kursu *@
-        <div class="strongCourse-link-container mt-4">
-            <a href="/strongCourse">
-                <h3>The STRONG Course</h3>
-            </a>
-        </div>
-
+        <div class="hero-content mainRight"> <h1>Učenje,</br>pojačano.</h1>
+                <p>Naša platforma za besplatne eKurseve ti omogućava da savladaš nove veštine iz IT-a, dizajna, biznisa i još mnogo toga.</p>
+                <ul>
+                    <li>Potpuno besplatno</li>
+                    <li>Kursevi kreirani od strane stručnjaka</li>
+                    <li>Uči kad hoćeš, gde hoćeš</li>
+                    <li> Dobij sertifikat po završetku</li>
+                </ul>
+                <p>Ne gubi vreme – počni da učiš danas!</p>
+                <div class="logos">
+                    <img src="~/images/espressoWhite.png" alt="3spresso Logo">
+                    <img src="~/images/raf.png" alt="RAF logo">
+                </div>
+                </div>
+       
     </div>
 </body>
 </html>
