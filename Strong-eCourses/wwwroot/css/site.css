@@ -252,6 +252,10 @@ input
   font-weight:500;
   font-size:4em;
 }
+.hero-content .logos img
+{
+  width:30%;
+}
 
 .hero-content p, .hero-content ul li
 {
@@ -261,7 +265,7 @@ input
 {
   margin-right:5em;
   margin-top:0px;
-  width:60%;
+  width:75%;
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
