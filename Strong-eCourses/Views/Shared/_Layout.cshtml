@@ -16,6 +16,8 @@
             <li class="liLogo"><a href="/"><img src="~/images/strongBlack.png" alt="Logo" /></a></li>
             <div class="navigation d-flex">
                 <li><a href="/">Početna</a></li>
+                <li><a asp-controller="Courses" asp-action="Index">Kursevi</a></li>
+                <li><a asp-controller="Schools" asp-action="Index">Škole</a></li>
                      @{
                         if (User.IsInRole("Admin"))
                         {
