@@ -92,12 +92,17 @@ img{
 {
   font-weight:300;
 }
+.footCol a, .footCol p, .footCol h3
+{
+  text-align: left;
+}
 .footCol
 {
   width:33%;
   padding:2em;
   display:flex;
-  flex-direction:column
+  flex-direction:column;
+  align-items: left;
 }
 .footCol a
 {
