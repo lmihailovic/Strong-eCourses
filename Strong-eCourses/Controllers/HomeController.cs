@@ -1,13 +1,17 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Strong_eCourses.Models;
 using Microsoft.AspNetCore.Authorization;
+using Strong_eCourses.Services;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+using MongoDB.Driver;
 
 namespace Strong_eCourses.Controllers;
 [Authorize]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -29,4 +33,10 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+
+
+
+
+
 }
