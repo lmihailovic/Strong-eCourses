@@ -92,17 +92,12 @@ img{
 {
   font-weight:300;
 }
-.footCol a, .footCol p, .footCol h3
-{
-  text-align: left;
-}
 .footCol
 {
   width:33%;
   padding:2em;
   display:flex;
-  flex-direction:column;
-  align-items: left;
+  flex-direction:column
 }
 .footCol a
 {
@@ -191,7 +186,7 @@ input
 
 }
 .logo{
-    width:65%;
+    width:80%;
     margin:0 auto;
 }
 .inp input:hover
@@ -252,10 +247,6 @@ input
   font-weight:500;
   font-size:4em;
 }
-.hero-content .logos img
-{
-  width:30%;
-}
 
 .hero-content p, .hero-content ul li
 {
@@ -264,8 +255,6 @@ input
 .reg .loginDiv
 {
   margin-right:5em;
-  margin-top:0px;
-  width:75%;
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
@@ -390,13 +379,13 @@ footer {
 .logos
 {
   display:flex;
-  height:20%;
-  /* width:100%; */
+  height:30%;
+  width:100%;
 }
-/* .logos img
+.logos img
 {
   width:20em
-} */
+}
 
 /*CSS za index stranicu*/
 .center-box {
@@ -408,25 +397,17 @@ footer {
 }
 
 .link-box {
-    width: 350px;
+    width: 400px;
     border: 2px solid #333;
     border-radius: 0;
-    padding: 40px;
+    padding: 50px;
     text-align: center;
-    /* margin-top:10px; */
+    margin-top:10px;
     transition: background-color 0.3s ease;
 }
 
 .link-box:hover {
-  color:#f5f5f5;
-  background: linear-gradient(160deg, rgba(137, 72, 79, 1) 31%, rgba(207, 149, 150, 1) 100%);
-  box-shadow: 0 0 20px rgba(137, 72, 79, 0.4);
-  border-color:rgba(137, 72, 79, 0.4);;
-  outline: 1px solid rgba(137,72,79,0.4);
-
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-
-  transition: all 0.3s ease;
+    background-color: #C0C0C0;
 }
 
 
@@ -569,131 +550,3 @@ footer {
     border-color: #333333;
     color: white;
 }
-/*              */
-
-.mainMain
-{
-  display:flex;
-  justify-content: space-between;
-  width:80%;
-}
-.mainLeft
-{
-  width:40%;
-  display:flex;
-  justify-content: left;
-  flex-direction: column;
-  align-items: center;
-  gap:1em
-}
-.mainMain
-{
-  display: flex;
-  justify-content: center;
-  
-  margin:0 auto;
-  margin-top:2em;
-  gap:3em;
-}
-.mainRight
-{
-  width:50%;
-  background-color: #1c1c1c;
-  padding:2em;
-  height: 700px;
-}
-.mainMain .hero-content li,
-.mainMain .hero-content a,
-.mainMain .hero-content p,
-.mainMain .hero-content h1
-{
-  color:#f5f5f5;
-
-}
-.mainMain .hero-content h1
-{
-  font-size:5em;
-  margin-bottom: 1em;
-  background: linear-gradient(160deg, rgb(196, 103, 98) 31%, rgba(207, 149, 150, 1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-
-  text-shadow: 0 0 10px rgba(137, 72, 79, 0.7),
-               0 0 20px rgba(137, 72, 79, 0.5),
-               0 0 30px rgba(207, 149, 150, 0.6);
-}
-.strongCourse
-{
-  margin-top:2em;
-}
-.strongCourse a h3
-{
-  text-decoration: underline;
-}
-.strongCourse a h3:hover
-{
-  color:rgb(137, 72, 79);
-
-  transition: all 0.3s ease;
-}
-
-.adminPanel
-{
-  display:flex;
-  flex-direction: column;
-  width:80%;
-}
-
-.inp select
-{
-  background-color:#1c1c1c;
-  border:none;
-  border-bottom: 1px solid #f5f5f5;
-  height:3em;
-  color:#f5f5f5
-}
-.submitBtn input
-{
-  height:3em;
-  background-color: #1c1c1c;
-  border:1px solid #f5f5f5;
-  color:#f5f5f5;
-  font-size:18px;
-}
-
-.submitBtn input:hover
-{
-  background-color:#f5f5f5;
-  border:1px solid #1c1c1c;
-  color:#1c1c1c;
-
-  transition:all 0.3s ease;
-}
-.coursePage
-{
-  display:flex;
-  width:100%;
-  flex-direction: column;
-}
-
-.course-card .buttons
-{
-  display:flex;
-  width:75%;
-  justify-content: left;
-
-}
-
-.course-card .buttons input
-{
-  height:45px;
-  width:100px;
-  margin-top:10px;
-  font-size:15px;
-}
-.loginTweak
-{
-  width:35%;
-  padding-top:0;
-  padding-bottom:0;
