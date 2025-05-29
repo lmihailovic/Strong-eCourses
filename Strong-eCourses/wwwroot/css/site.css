@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 *
 {
   margin:0;
@@ -386,6 +386,43 @@ footer {
 {
   width:20em
 }
+
+/*CSS za index stranicu*/
+.center-box {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-box {
+    width: 400px;
+    border: 2px solid #333;
+    border-radius: 0;
+    padding: 50px;
+    text-align: center;
+    margin-top:10px;
+    transition: background-color 0.3s ease;
+}
+
+.link-box:hover {
+    background-color: #C0C0C0;
+}
+
+
+.strongCourse-link-container {
+    margin-top: 2px;
+    text-align: center;
+}
+
+    .strongCourse-link-container a {
+        text-decoration: underline;
+        font-size: 1.5em;
+        color: #1c1c1c;
+    }
+
+/**/
 
 .buttons
 {
