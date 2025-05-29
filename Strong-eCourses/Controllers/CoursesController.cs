@@ -21,15 +21,6 @@ public class CoursesController : Controller
         _mongoService = mongoService;
     }
 
-    // public IActionResult Index()
-    // {
-    //     var collection = _mongoService.GetCollection<Course>("courses");
-    //     var courses = collection.Find(_ => true).ToList();
-
-
-    //     return View(courses);
-    // }
-
     public IActionResult Privacy()
     {
         return View();
@@ -154,6 +145,25 @@ public class CoursesController : Controller
         }
 
         return RedirectToAction("Index");
+    }
+
+    public async Task<IActionResult> Details(string id)
+    {
+        if (string.IsNullOrEmpty(id))
+        {
+            return NotFound();
+        }
+        var collection = _mongoService.GetCollection<Course>("courses");
+        
+        var course = await collection
+            .Find(c => c.Id == id)
+            .FirstOrDefaultAsync();
+        if (course == null)
+        {
+            return NotFound();
+        }
+
+        return View(course);
     }
 
 }

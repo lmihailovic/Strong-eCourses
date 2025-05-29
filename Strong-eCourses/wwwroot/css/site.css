@@ -498,6 +498,22 @@ footer {
 } */
 
 
+.table{ 
+  border: 1px solid #1c1c1c;
+}
+
+.details-link:hover
+{
+  text-decoration: none;
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+.details-link:hover a{
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+}
+=======
 
 /*skole stranica*/
 .header-row {
@@ -681,4 +697,3 @@ footer {
   width:35%;
   padding-top:0;
   padding-bottom:0;
-}

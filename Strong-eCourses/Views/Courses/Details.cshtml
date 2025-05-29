@@ -1,0 +1,34 @@
+@model Course
+
+@{
+    ViewData["Title"] = "Course Details";
+}
+
+<div class="container mt-4 table-responsive-xl">
+<a asp-action="Index" class="btn btn-secondary mb-4"> &lt Back to Courses</a>
+    <h2>Course Details</h2>
+    <table class="table table-bordered mt-3 table-striped  ">
+        <tr>
+            <th>Name</th>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <th>School</th>
+            <td class="details-link">@Model.School</td>
+        </tr>
+        <tr>
+            <th>Difficulty</th>
+            <td>@Model.Difficulty</td>
+        </tr>
+        <tr>
+            <th>Category</th>
+            <td>@Model.Category</td>
+        </tr>
+        <tr>
+            <th>Link</th>
+            <td class="details-link">
+                <a href="@Model.Link" target="_blank" rel="noopener">@Model.Link</a>
+            </td>
+        </tr>
+    </table>
+</div>
