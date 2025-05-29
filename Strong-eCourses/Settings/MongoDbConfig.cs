@@ -1,4 +1,4 @@
-﻿namespace Strong_eCourses;
+namespace Strong_eCourses;
 
 public class MongoDbConfig
 {

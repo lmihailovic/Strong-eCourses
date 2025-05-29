@@ -10,25 +10,11 @@
     <p>Admin stranica</p>
 <h2>Svi korisnici</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Email</th>
-            <th>Username</th>
-            <th>Role</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var user in Model)
-        {
-            <tr>
-                <td>@user.Email</td>
-                <td>@user.UserName</td>
-                <td>
-                    <a href="">Rola</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="buttons">
+    <div class="formField submitBtn">
+        <a asp-controller="Admin" asp-action="Users">Korisnici</a>
+    </div>
+    <div class="formField submitBtn">
+        <a asp-controller="Courses" asp-action="Course">Dodaj kurs</a>
+    </div>
 </div>
