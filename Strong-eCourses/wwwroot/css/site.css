@@ -612,3 +612,10 @@ main
 
   transition: all 0.3s ease;
 }
+
+.adminPanel
+{
+  display:flex;
+  flex-direction: column;
+  width:80%;
+}
