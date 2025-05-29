@@ -654,3 +654,19 @@ footer {
   width:100%;
   flex-direction: column;
 }
+
+.course-card .buttons
+{
+  display:flex;
+  width:75%;
+  justify-content: left;
+
+}
+
+.course-card .buttons input
+{
+  height:45px;
+  width:100px;
+  margin-top:10px;
+  font-size:15px;
+}
