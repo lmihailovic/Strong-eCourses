@@ -122,8 +122,9 @@ public class CoursesController : Controller
         return View(course);
     }
 
-    [HttpPost]
     [Authorize(Roles = "Admin")]
+    [ValidateAntiForgeryToken]
+    [HttpPost]
     public async Task<IActionResult> Edit(Course course)
     {
         if (!ModelState.IsValid)
@@ -145,7 +146,6 @@ public class CoursesController : Controller
 
         return RedirectToAction("Index");
     }
-
 
     public async Task<IActionResult> Details(string id)
     {

@@ -39,12 +39,10 @@
                                 <input type="hidden" name="id" value="@course.Id" />
                                 <div class="formField submitBtn"><button type="submit" class="accent">Obriši</button></div>
                             </form>
-                            <form asp-controller="Courses" asp-action="Delete" method="post">
-                                <input type="hidden" name="id" value="@course.Id" />
                             <div class="formField submitBtn">
-                                <button type="submit" asp-controller="Course" asp-action="Edit" asp-route-id="@course.Id">Izmeni</button>
+                                <a asp-controller="Courses" asp-action="Edit" asp-route-id="@course.Id">Izmeni</a>
                             </div>
-                            </form>
+
 
 
                         </div>

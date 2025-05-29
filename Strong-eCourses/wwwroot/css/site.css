@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 *
 {
   margin:0;
@@ -387,6 +387,43 @@ footer {
   width:20em
 }
 
+/*CSS za index stranicu*/
+.center-box {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-box {
+    width: 400px;
+    border: 2px solid #333;
+    border-radius: 0;
+    padding: 50px;
+    text-align: center;
+    margin-top:10px;
+    transition: background-color 0.3s ease;
+}
+
+.link-box:hover {
+    background-color: #C0C0C0;
+}
+
+
+.strongCourse-link-container {
+    margin-top: 2px;
+    text-align: center;
+}
+
+    .strongCourse-link-container a {
+        text-decoration: underline;
+        font-size: 1.5em;
+        color: #1c1c1c;
+    }
+
+/**/
+
 .buttons
 {
   display:flex;
@@ -456,4 +493,60 @@ footer {
   color: #f5f5f5;
   text-decoration: none;
   font-weight: 500;
+}
+=======
+
+/*skole stranica*/
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.course-box {
+    border: 1px solid #ccc;
+    
+    
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .course-box a {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2rem; 
+
+    }
+
+        .course-box a:hover {
+            text-decoration: underline;
+        }
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.page-link {
+    color: #333333; /* Tamno siva boja linkova */
+}
+
+    .page-link:hover {
+        color: #333333; /* Tamno siva ostaje pri hoveru */
+        text-decoration: underline;
+    }
+
+.page-item.active .page-link {
+    background-color: #333333; /* Tamno siva pozadina za aktivni broj */
+    border-color: #333333;
+    color: white;
 }
