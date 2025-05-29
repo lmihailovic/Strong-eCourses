@@ -549,7 +549,7 @@ footer {
 }
 /*              */
 
-.main
+.mainMain
 {
   display:flex;
   justify-content: space-between;
@@ -564,11 +564,14 @@ footer {
   align-items: center;
   gap:1em
 }
-main
+.mainMain
 {
   display: flex;
   justify-content: center;
+  
+  margin:0 auto;
   margin-top:2em;
+  gap:3em;
 }
 .mainRight
 {
@@ -577,15 +580,15 @@ main
   padding:2em;
   height: 700px;
 }
-.main .hero-content li,
-.main .hero-content a,
-.main .hero-content p,
-.main .hero-content h1
+.mainMain .hero-content li,
+.mainMain .hero-content a,
+.mainMain .hero-content p,
+.mainMain .hero-content h1
 {
   color:#f5f5f5;
 
 }
-.main .hero-content h1
+.mainMain .hero-content h1
 {
   font-size:5em;
   margin-bottom: 1em;
@@ -618,4 +621,36 @@ main
   display:flex;
   flex-direction: column;
   width:80%;
+}
+
+.inp select
+{
+  background-color:#1c1c1c;
+  border:none;
+  border-bottom: 1px solid #f5f5f5;
+  height:3em;
+  color:#f5f5f5
+}
+.submitBtn input
+{
+  height:3em;
+  background-color: #1c1c1c;
+  border:1px solid #f5f5f5;
+  color:#f5f5f5;
+  font-size:18px;
+}
+
+.submitBtn input:hover
+{
+  background-color:#f5f5f5;
+  border:1px solid #1c1c1c;
+  color:#1c1c1c;
+
+  transition:all 0.3s ease;
+}
+.coursePage
+{
+  display:flex;
+  width:100%;
+  flex-direction: column;
 }
