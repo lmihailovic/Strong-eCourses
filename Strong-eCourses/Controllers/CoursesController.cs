@@ -125,33 +125,34 @@ public class CoursesController : Controller
 
         if (course == null)
         {
-            return NotFound();
+            return RedirectToAction("Privacy");
         }
 
         return View(course);
     }
 
-[HttpPost]
-[Authorize(Roles = "Admin")]
-public async Task<IActionResult> Edit(Course course)
-{
-    if (!ModelState.IsValid)
+    [Authorize(Roles = "Admin")]
+    [ValidateAntiForgeryToken]
+    [HttpPost]
+    public async Task<IActionResult> Edit(Course course)
     {
-        return View(course);
+        if (!ModelState.IsValid)
+        {
+            return View(course);
+        }
+
+        var collection = _mongoService.GetCollection<Course>("courses");
+
+        var filter = Builders<Course>.Filter.Eq(c => c.Id, course.Id);
+
+        // Zameni postojeći dokument novim izmenjenim podacima
+        var result = await collection.ReplaceOneAsync(filter, course);
+
+        if (result.MatchedCount == 0)
+        {
+            return NotFound();
+        }
+
+        return RedirectToAction("Index");
     }
-
-    var collection = _mongoService.GetCollection<Course>("courses");
-
-    var filter = Builders<Course>.Filter.Eq(c => c.Id, course.Id);
-
-    // Zameni postojeći dokument novim izmenjenim podacima
-    var result = await collection.ReplaceOneAsync(filter, course);
-
-    if (result.MatchedCount == 0)
-    {
-        return NotFound();
-    }
-
-    return RedirectToAction("Index");
-}
 }
