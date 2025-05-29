@@ -27,20 +27,21 @@ namespace Strong_eCourses.Controllers
                 };
 
                 IdentityResult result=await userManager.CreateAsync(appUser,user.Password);
-                if(result.Succeeded)
+                if (result.Succeeded)
                 {
-                    ViewBag.Message="Korisnik je uspesno kreiran!";
+                    ViewBag.Message = "Korisnik je uspesno kreiran!";
+                    return RedirectToAction("Login", "Account");
                 }
                 else
                 {
-                    foreach(IdentityError error in result.Errors)
+                    foreach (IdentityError error in result.Errors)
                     {
-                        ModelState.AddModelError("",error.Description);
+                        ModelState.AddModelError("", error.Description);
                     }
                 }
 
             }
-            return RedirectToAction("Login", "Account");
+            return View(user);
         }
     }
 }
