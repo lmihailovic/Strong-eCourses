@@ -22,6 +22,10 @@
         <div class="welcomeDiv">
             <h2>Dobro došli!</h2>
             <p>Molimo potvrdite identitet</p>
+            @if(ViewBag.Message !=null)
+            {
+                <div>@ViewBag.Message</div>
+            }
         </div>
         <form method="POST">
             <div class="form">

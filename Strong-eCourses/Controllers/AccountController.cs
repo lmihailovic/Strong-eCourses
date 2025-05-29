@@ -41,7 +41,7 @@ public class AccountController : Controller
                     return Redirect(returnUrl ?? "/");
                 }
             }
-            ModelState.AddModelError(nameof(email), "Uneli ste nepostojecu email adresu ili pogresnu lozinku");
+            ViewBag.Message = "Uneli ste nepostojeću e-mail adresu ili lozinku.";
         }
 
         return View();
