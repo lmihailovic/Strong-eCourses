@@ -125,7 +125,7 @@ public class CoursesController : Controller
 
         if (course == null)
         {
-            return RedirectToAction("Privacy");
+            return NotFound();
         }
 
         return View(course);
@@ -155,4 +155,5 @@ public class CoursesController : Controller
 
         return RedirectToAction("Index");
     }
+
 }
