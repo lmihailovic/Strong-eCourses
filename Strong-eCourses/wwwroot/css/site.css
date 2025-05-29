@@ -191,7 +191,7 @@ input
 
 }
 .logo{
-    width:80%;
+    width:65%;
     margin:0 auto;
 }
 .inp input:hover
@@ -260,6 +260,8 @@ input
 .reg .loginDiv
 {
   margin-right:5em;
+  margin-top:0px;
+  width:60%;
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
@@ -669,4 +671,10 @@ footer {
   width:100px;
   margin-top:10px;
   font-size:15px;
+}
+.loginTweak
+{
+  width:35%;
+  padding-top:0;
+  padding-bottom:0;
 }
