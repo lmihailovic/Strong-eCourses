@@ -26,7 +26,7 @@
         {
             
                 <div class="course-card">
-                    <a href="@course.Link" target="_blank" class="course-card-link">
+                    <a asp-action="Details" asp-route-id="@course.Id" class="course-card-link">
                     <h5>@course.Name</h5>
                     <p>@course.School</p>
                     <p>@course.Difficulty</p>

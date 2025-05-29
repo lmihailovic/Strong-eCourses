@@ -21,15 +21,6 @@ public class CoursesController : Controller
         _mongoService = mongoService;
     }
 
-    // public IActionResult Index()
-    // {
-    //     var collection = _mongoService.GetCollection<Course>("courses");
-    //     var courses = collection.Find(_ => true).ToList();
-
-
-    //     return View(courses);
-    // }
-
     public IActionResult Privacy()
     {
         return View();
@@ -131,27 +122,48 @@ public class CoursesController : Controller
         return View(course);
     }
 
-[HttpPost]
-[Authorize(Roles = "Admin")]
-public async Task<IActionResult> Edit(Course course)
-{
-    if (!ModelState.IsValid)
+    [HttpPost]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Edit(Course course)
     {
+        if (!ModelState.IsValid)
+        {
+            return View(course);
+        }
+
+        var collection = _mongoService.GetCollection<Course>("courses");
+
+        var filter = Builders<Course>.Filter.Eq(c => c.Id, course.Id);
+
+        // Zameni postojeći dokument novim izmenjenim podacima
+        var result = await collection.ReplaceOneAsync(filter, course);
+
+        if (result.MatchedCount == 0)
+        {
+            return NotFound();
+        }
+
+        return RedirectToAction("Index");
+    }
+
+
+    public async Task<IActionResult> Details(string id)
+    {
+        if (string.IsNullOrEmpty(id))
+        {
+            return NotFound();
+        }
+        var collection = _mongoService.GetCollection<Course>("courses");
+        
+        var course = await collection
+            .Find(c => c.Id == id)
+            .FirstOrDefaultAsync();
+        if (course == null)
+        {
+            return NotFound();
+        }
+
         return View(course);
     }
 
-    var collection = _mongoService.GetCollection<Course>("courses");
-
-    var filter = Builders<Course>.Filter.Eq(c => c.Id, course.Id);
-
-    // Zameni postojeći dokument novim izmenjenim podacima
-    var result = await collection.ReplaceOneAsync(filter, course);
-
-    if (result.MatchedCount == 0)
-    {
-        return NotFound();
-    }
-
-    return RedirectToAction("Index");
-}
 }
