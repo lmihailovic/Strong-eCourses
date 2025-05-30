@@ -1,0 +1,30 @@
+@model CourseViewModel
+@{
+    ViewData["Title"] = "The Strong Course";
+
+    var difficultyOrder = new List<string> {"Beginner", "Intermediate", "Expert"};
+    var sortedCourses = Model.Courses.OrderBy(c => difficultyOrder.IndexOf(c.Difficulty)).ToList();
+}
+
+<h1>The STRONG Course</h1>
+
+<p>Ispratite ovaj <b>JAK</b> kurs da biste stekli sveobuhvatne veštine programiranja!</p>
+<p>Prošli su dani mučenja oko sintaktse jezika i koncepata programiranja. Nakon ovog kursa, bićete najjači programer u timu!</p>
+
+<table class="table table-bordered mt-3 table-striped  ">
+    <thead>
+        <th>Redni broj</th>
+        <th>Naziv</th>
+        <th>Institucija</th>
+        <th>Težina</th>
+    </thead>
+    @foreach (var course in sortedCourses.Select((value, index) => new {value, index}))
+    {
+        <tr>
+            <td>@(course.index + 1)</td>
+            <td>@course.value.Name</td>
+            <td><a class="text-decoration-underline" href="@course.value.Link">@course.value.School</a></td>
+            <td>@course.value.Difficulty</td>
+        </tr>
+    }
+</table>

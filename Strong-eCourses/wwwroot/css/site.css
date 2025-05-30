@@ -697,3 +697,9 @@ footer {
   width:35%;
   padding-top:0;
   padding-bottom:0;
+}
+
+.text-decoration-underline
+{
+  text-decoration: underline;
+}
