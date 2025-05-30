@@ -1,0 +1,30 @@
+@model List<Strong_eCourses.ApplicationUser>
+@using Microsoft.AspNetCore.Authentication
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="adminPanel">
+<div class="text-left">
+    <h1 class="display-4">Admin stranica</h1>
+    <p>
+      Ova stranica je namenjena administratorima platforme i trenutno omogućava unos kurseva. 
+    </p>
+    <p>
+      U narednim fazama planirano je proširenje funkcionalnosti koje će uključivati upravljanje korisnicima, analitiku i još mnogo toga.
+    </p>
+    <p>
+      Hvala vam na korišćenju sistema. Sve nove opcije biće blagovremeno objavljene i dostupne u ovom panelu.
+    </p>
+</div> 
+
+<div class="buttons d-flex center">
+    @* <div class="formField submitBtn">
+        <a asp-controller="Admin" asp-action="Users">Korisnici</a>
+    </div> *@
+    <div class="formField submitBtn">
+        <a asp-controller="Courses" asp-action="Course">Dodaj kurs</a>
+    </div>
+</div>
+</div>
+

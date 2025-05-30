@@ -1,31 +1,705 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+  font-family:'Urbanist',sans-serif;
+  font-size: 14px; 
+}
+
+a
+{
+  text-decoration: none;
+  color:#1c1c1c;
+}
 html {
+  display:block;
+  font-family:'Urbanist',sans-serif;
   font-size: 14px;
 }
+body
+{
+  margin: auto;
+}
+header
+{
+  height:5em;
+  font-size:16px;
+  font-weight:500;
+  margin:2em 4em 0 4em;
+  border-bottom:1px solid #1c1c1c
+}
+header ul
+{
+  display:flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+header li
+{
+  display:flex;
+  align-items: center;
+}
+.liLogo
+{
+  width:20%;
+}
+.liLogo img
+{
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+  height:80px;
+}
+img{
+  max-width:100%;
+  max-height:100%;
+}
+.navigation 
+{
+  gap:3em;
+}
+.navigation li a
+{
+  width:100px;
+  text-align: center;
+  font-size:1.5em;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.navigation li:hover a
+{
+  color:#fff;
+  font-size:1.4em;
+  background-color: #1c1c1c;
+
+  transition: all 0.3s ease;
+}
+.liLogo img:hover
+{
+  background-color: #1c1c1c1c;
+  transition: all 0.3s ease;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.foot
+{
+  display:flex;
+  justify-content: space-between;
+  background-color: #1c1c1c;
+  color:#f5f5f5;
+  font-weight:300
+}
+.footCol a,.footCol p
+{
+  font-weight:300;
+}
+.footCol a, .footCol p, .footCol h3
+{
+  text-align: left;
+}
+.footCol
+{
+  width:33%;
+  padding:2em;
+  display:flex;
+  flex-direction:column;
+  align-items: left;
+}
+.footCol a
+{
+  color:#f5f5f5;
+}
+.footCol img
+{
+  height:200px;
+}
+.footCol p:hover, .footCol a:hover
+{
+  padding-left:.2em;
+  color:#fff
+}
+.loginDiv
+{
+    width:40%;
+    border:1px solid #1c1c1c;
+    padding:1em 3em;
+    color:#f5f5f5;
+    background-color: #1c1c1c;
+    margin: auto;
+
+    box-shadow: 0px -2px 55px 13px rgba(115,115,115,0.75);
+    -webkit-box-shadow: 0px -2px 55px 13px rgba(115,115,115,0.75);
+    -moz-box-shadow: 0px -2px 55px 13px rgba(115,115,115,0.75);
+}
+.loginDiv h2, .loginDiv label,.loginDiv p
+{
+    font-weight: 200;
+}
+ .loginDiv label,.loginDiv p
+{
+    font-size: 18px;
+}
+.formField
+{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:2em;
+}
+.formNote
+{
+    margin:0 auto;
+    text-align: center;
+}
+.formNote a, .formNote p
+{
+    color:#cfcfcf;
+    font-size:15px
+}
+.formNote a:hover
+{
+    color:#fff;
+
+    transition: all 0.3s ease
+}
+.cont
+{
+    max-width:85%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcomeDiv
+{
+    text-align: center;
+}
+.welcomeDiv h2
+{
+    font-size:24px;
+    font-weight: lighter;
+}
+input
+{
+    outline:none
+}
+.inp input
+{
+    background-color: #1c1c1c;
+    height:3em;
+    border:none;
+    border-bottom:1px solid #f5f5f5;
+    color:#f5f5f5
+
+}
+.logo{
+    width:65%;
+    margin:0 auto;
+}
+.inp input:hover
+{
+    margin-top:0.3em;
+
+    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out;
+}
+.submitBtn button
+{
+    background-color: #1c1c1c;
+    height:3em;
+    border-color:#f5f5f5;
+    border:none;
+    border:1px solid #f5f5f5;
+    color:#f5f5f5;
+    font-weight:300;
+    font-size:18px;
 }
 
-body {
-  margin-bottom: 60px;
+.submitBtn button:hover
+{
+    background-color:#f5f5f5;
+    color: #1c1c1c;
+  
+    transition: all 0.3s ease;
+}
+.loginDiv h2, .loginDiv p
+{
+    padding-bottom: 0.5em;
+}
+.regLogo
+{
+    width:50%;
+    margin:0 auto
+}
+.reg
+{
+    max-width:85%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.hero-content
+{
+  display:flex;
+  flex-direction: column;
+
+}
+.hero-content ul li
+{
+  list-style-type: none;
+}
+.hero-content h1
+{
+  font-weight:500;
+  font-size:4em;
+}
+.hero-content .logos img
+{
+  width:30%;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.hero-content p, .hero-content ul li
+{
+  font-size:1.25em;
+}
+.reg .loginDiv
+{
+  margin-right:5em;
+  margin-top:0px;
+  width:75%;
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+
+
+.container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Css za kurseve */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    align-items: stretch; /* ensures all cards fill height */
+}
+
+.course-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    
+    /*border-radius: 12px;*/
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    min-height: 260px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.course-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.course-card-link:hover .course-card {
+    border: 1px solid  #1c1c1c;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+}
+.card-link-text {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #007bff;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.course-card h5 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #1c1c1c;
+}
+
+.course-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+
+.course-card a:hover {
+    text-decoration: underline;
+}
+
+.pagination-controls {
+    margin-top: 30px;
+}
+
+.pagination-controls a {
+    margin: 0 10px;
+}
+
+footer {
+    background: #1c1c1c;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.btn-secondary {
+    background-color: #1c1c1c;
+    border-color: #1c1c1c;
+    border-radius: 0%;
+}
+
+.course-card h5{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.course-card p {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.form-control, .form-select {
+        border-radius: 0 ;
+        border: 1px solid #1c1c1c;
+    }
+
+    .filter-form {
+        max-width: 400px;
+        margin-left: auto;
+    }
+
+    .filter-form input,
+    .filter-form select {
+        margin-bottom: 10px;
+    }
+
+.logos
+{
+  display:flex;
+  height:20%;
+  /* width:100%; */
+}
+/* .logos img
+{
+  width:20em
+} */
+
+/*CSS za index stranicu*/
+.center-box {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-box {
+    width: 350px;
+    border: 2px solid #333;
+    border-radius: 0;
+    padding: 40px;
+    text-align: center;
+    /* margin-top:10px; */
+    transition: background-color 0.3s ease;
+}
+
+.link-box:hover {
+  color:#f5f5f5;
+  background: linear-gradient(160deg, rgba(137, 72, 79, 1) 31%, rgba(207, 149, 150, 1) 100%);
+  box-shadow: 0 0 20px rgba(137, 72, 79, 0.4);
+  border-color:rgba(137, 72, 79, 0.4);;
+  outline: 1px solid rgba(137,72,79,0.4);
+
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+
+  transition: all 0.3s ease;
+}
+
+
+.strongCourse-link-container {
+    margin-top: 2px;
+    text-align: center;
+}
+
+    .strongCourse-link-container a {
+        text-decoration: underline;
+        font-size: 1.5em;
+        color: #1c1c1c;
+    }
+
+/**/
+
+.buttons
+{
+  display:flex;
+  justify-content: flex-end;
+  gap:2em;
+}
+
+.buttons .submitBtn a
+{
+    display:flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    height:3em;
+    border-color:#f5f5f5;
+    border:none;
+    border:1px solid #f5f5f5;
+    color:#f5f5f5;
+    font-weight:300;
+    font-size:18px;
+    justify-content: center;
+    width:150px;
+}
+
+.buttons .submitBtn a:hover
+{
+    background-color:#f5f5f5;
+    color: #1c1c1c;
+    border:1px solid #1c1c1c;
+  
+    transition: all 0.3s ease;
+}
+
+
+.course-card .buttons .formField a
+{
+  width:100px;
+  font-size:15px;
+  text-decoration: none;
+}
+.course-card .buttons .formField .accent:hover
+{
+  border:1px solid rgb(137, 72, 79);
+  color:rgb(137, 72, 79);
+}
+.course-card .buttons
+{
+  display:flex;
+  justify-content: flex-start;
+}
+
+/* .form{
+  background-color: #1c1c1c;
+} */
+
+
+.table{ 
+  border: 1px solid #1c1c1c;
+}
+
+.details-link:hover
+{
+  text-decoration: none;
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+.details-link:hover a{
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+}
+=======
+
+/*skole stranica*/
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.course-box {
+    border: 1px solid #ccc;
+    
+    
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .course-box a {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2rem; 
+
+    }
+
+        .course-box a:hover {
+            text-decoration: underline;
+        }
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.page-link {
+    color: #333333; /* Tamno siva boja linkova */
+}
+
+    .page-link:hover {
+        color: #333333; /* Tamno siva ostaje pri hoveru */
+        text-decoration: underline;
+    }
+
+.page-item.active .page-link {
+    background-color: #333333; /* Tamno siva pozadina za aktivni broj */
+    border-color: #333333;
+    color: white;
+}
+/*              */
+
+.mainMain
+{
+  display:flex;
+  justify-content: space-between;
+  width:80%;
+}
+.mainLeft
+{
+  width:40%;
+  display:flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: center;
+  gap:1em
+}
+.mainMain
+{
+  display: flex;
+  justify-content: center;
+  
+  margin:0 auto;
+  margin-top:2em;
+  gap:3em;
+}
+.mainRight
+{
+  width:50%;
+  background-color: #1c1c1c;
+  padding:2em;
+  height: 700px;
+}
+.mainMain .hero-content li,
+.mainMain .hero-content a,
+.mainMain .hero-content p,
+.mainMain .hero-content h1
+{
+  color:#f5f5f5;
+
+}
+.mainMain .hero-content h1
+{
+  font-size:5em;
+  margin-bottom: 1em;
+  background: linear-gradient(160deg, rgb(196, 103, 98) 31%, rgba(207, 149, 150, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+  text-shadow: 0 0 10px rgba(137, 72, 79, 0.7),
+               0 0 20px rgba(137, 72, 79, 0.5),
+               0 0 30px rgba(207, 149, 150, 0.6);
+}
+.strongCourse
+{
+  margin-top:2em;
+}
+.strongCourse a h3
+{
+  text-decoration: underline;
+}
+.strongCourse a h3:hover
+{
+  color:rgb(137, 72, 79);
+
+  transition: all 0.3s ease;
+}
+
+.adminPanel
+{
+  display:flex;
+  flex-direction: column;
+  width:80%;
+}
+
+.inp select
+{
+  background-color:#1c1c1c;
+  border:none;
+  border-bottom: 1px solid #f5f5f5;
+  height:3em;
+  color:#f5f5f5
+}
+.submitBtn input
+{
+  height:3em;
+  background-color: #1c1c1c;
+  border:1px solid #f5f5f5;
+  color:#f5f5f5;
+  font-size:18px;
+}
+
+.submitBtn input:hover
+{
+  background-color:#f5f5f5;
+  border:1px solid #1c1c1c;
+  color:#1c1c1c;
+
+  transition:all 0.3s ease;
+}
+.coursePage
+{
+  display:flex;
+  width:100%;
+  flex-direction: column;
+}
+
+.course-card .buttons
+{
+  display:flex;
+  width:75%;
+  justify-content: left;
+
+}
+
+.course-card .buttons input
+{
+  height:45px;
+  width:100px;
+  margin-top:10px;
+  font-size:15px;
+}
+.loginTweak
+{
+  width:35%;
+  padding-top:0;
+  padding-bottom:0;
+}
+
+.text-decoration-underline
+{
+  text-decoration: underline;
 }

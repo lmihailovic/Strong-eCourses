@@ -1,0 +1,56 @@
+﻿@model Strong_eCourses.Models.CourseFilterModel
+
+@{
+    ViewData["Title"] = "Škole i Kursevi";
+}
+
+
+<div class="header-row">
+    <h2>Škole</h2>
+
+    <form method="get" asp-controller="Schools" asp-action="Index">
+        <select name="selectedSchool" class="form-select" onchange="this.form.submit()">
+            <option value="">-- Sve škole --</option>
+            @foreach (var school in Model.Schools)
+            {
+                <option value="@school" selected="@(school == Model.SelectedSchool ? "selected" : null)">
+                    @school
+                </option>
+            }
+        </select>
+    </form>
+</div>
+
+@if (Model.Courses != null && Model.Courses.Count > 0)
+{
+    <h3 class="mt-4">Kursevi za školu: @(string.IsNullOrEmpty(Model.SelectedSchool) ? "Sve škole" : Model.SelectedSchool)</h3>
+
+    <div class="courses-container mt-3">
+        @foreach (var course in Model.Courses)
+        {
+            <div class="course-box">
+                <a href="@course.Link" target="_blank">@course.Name</a>
+                <p><strong>Kategorija:</strong> @course.Category</p>
+                <p><strong>Težina:</strong> @course.Difficulty</p>
+            </div>
+        }
+    </div>
+
+    @if (Model.TotalPages > 1)
+    {
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination">
+                @for (int i = 1; i <= Model.TotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { selectedSchool = Model.SelectedSchool, page = i })">@i</a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    }
+}
+else
+{
+    <p class="mt-4">Nema kurseva za odabranu školu.</p>
+}

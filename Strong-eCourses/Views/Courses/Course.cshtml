@@ -1,0 +1,43 @@
+@model Strong_eCourses.Models.Course
+@{
+    ViewData["Title"] = "Course - Insert";
+}
+<div class="coursePage">
+    <h1>Novi kurs</h1>
+<div class="loginDiv">
+    @Html.ValidationSummary()
+<form asp-action="Course" method="POST">
+    @Html.AntiForgeryToken()
+    <div class="form">
+        <input type="hidden" asp-for="Id" />
+        <div class="formField inp">
+            <label for="">Naziv kursa</label>
+            <input type="text" asp-for="Name" >
+        </div>
+        <div class="formField inp">
+            <label for="">Link</label>
+            <input type="text" asp-for="Link">
+        </div>
+        <div class="formField inp">
+            <label for="">Kategorija</label>
+            <input type="text" asp-for="Category">
+        </div>
+        <div class="formField inp">
+            <label for="">Težina</label>
+            <select asp-for="Difficulty">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+            </select>
+        </div>
+        <div class="formField inp">
+            <label for="">Škola</label>
+            <input type="text" asp-for="School">
+        </div>
+        <div class="formField submitBtn">
+            <input type="submit" value="Potvrdi">
+        </div>
+    </div>
+</form>
+</div>
+</div>

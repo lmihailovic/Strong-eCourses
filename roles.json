@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$binary": {
+      "base64": "VQ6EAOKbQdSnFkRmVUQAAA==",
+      "subType": "04"
+    }
+  },
+  "Name": "Admin",
+  "NormalizedName": "ADMIN",
+  "ConcurrencyStamp": null,
+  "Version": 1,
+  "Claims": []
+}]
